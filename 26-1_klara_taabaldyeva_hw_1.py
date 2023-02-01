@@ -35,12 +35,8 @@ class Teachers(Person):
 # print(f'Experience: {teacher.experience} years\nSalary: {teacher.count_salary()} soms')
 
 def create_student(name: str, marks: dict):
-    students_list = []
-    students_list.append(name.title())
-    students_list.append(marks)
-    sum_marks = sum(marks.values())
-    average = sum_marks / len(marks.keys())
-    students_list.append(round(average, 2))
+    average = sum(marks.values()) / len(marks.keys())
+    students_list = [name.title(), marks, round(average, 2)]
     return students_list
 
 
